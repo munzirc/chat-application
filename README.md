@@ -18,10 +18,11 @@ A real-time chat application built as part of the assignment for the Full Stack 
 ## 📸 Screenshots
 
 ### Login Page
-![Login Page](./public/screenshot-1.png)
+![Login Page](./public/screenshot-2.png)
+
 
 ### Message View
-![Message View](./public/screenshot-2.png)
+![Message View](./public/screenshot-1.png)
 
 ## 🔗 Live Demo
 
