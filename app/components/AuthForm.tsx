@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { createClient, deleteUser } from "../utils/supabase/supabaseClient";
+import { createClient } from "../utils/supabase/supabaseClient";
 
 type Props = {
   isSignUp: boolean;
@@ -63,10 +63,6 @@ export default function AuthForm({ isSignUp }: Props) {
     }
   };
 
-  // const handleDelete = () => {
-
-  //    deleteUser('550e8400-e29b-41d4-a716-446655440000');
-  // };
 
   return (
    <>
@@ -117,8 +113,6 @@ export default function AuthForm({ isSignUp }: Props) {
 
       
     </form>
-
-    {/* <button type="button" onClick={handleDelete}>Delete</button> */}
    </>
   );
 }
