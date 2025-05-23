@@ -2,8 +2,6 @@ import React from "react";
 import { AiFillMessage } from "react-icons/ai";
 import { BiSolidBellOff } from "react-icons/bi";
 import { BsStars } from "react-icons/bs";
-import { FaRegDotCircle } from "react-icons/fa";
-import { FaCircleDot } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineInstallDesktop, MdUnfoldMore } from "react-icons/md";
 import { PiListBulletsBold } from "react-icons/pi";

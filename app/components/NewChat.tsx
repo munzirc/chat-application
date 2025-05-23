@@ -30,7 +30,7 @@ const NewChat = () => {
   const openSheet = async () => {
     setShowSheet(true);
 
-    const { data: usersData, error } = await supabase
+    const { data: usersData } = await supabase
       .from("users")
       .select("id, name, avatar_url");
 
@@ -61,7 +61,7 @@ const NewChat = () => {
       return;
     }
 
-    const { data, error } = await supabase
+    const { data } = await supabase
       .from("chats")
       .insert([{ user1_id: currentUserId, user2_id: otherUser.id }])
       .select("id")
@@ -113,7 +113,7 @@ const NewChat = () => {
                 <img
                   src={user.avatar_url || "/default_avatar.jpg"}
                   alt="avatar"
-                  className="w-10 h-10 rounded-full object-cover bg-gray-300"
+                  className="h-8 w-8 rounded-full object-cover bg-gray-300"
                 />
                 <div>
                   <p className="font-medium text-sm">{user.name}</p>

@@ -3,16 +3,11 @@
 import { useEffect, useState, useRef } from "react";
 import { createClient } from "../utils/supabase/supabaseClient";
 import { useApp } from "../context/AppContext";
-import { FiPaperclip, FiSmile, FiSend } from "react-icons/fi";
-import { BsThreeDotsVertical, BsSearch, BsStars } from "react-icons/bs";
+import { BsSearch, BsStars } from "react-icons/bs";
 import dayjs from "dayjs";
 import ChatInputBar from "./ChatInputBar";
 
-type User = {
-  id: string;
-  name: string;
-  avatar_url: string;
-};
+
 
 type Message = {
   id: string;
@@ -129,7 +124,7 @@ const MessageViewer = () => {
         <img
           src={selectedChat.other_user.avatar_url}
           alt="avatar"
-          className="w-8 h-8 rounded-full"
+          className="rounded-full h-8 w-8"
         />
         <div className="flex-1">
           <p className="font-medium">{selectedChat.other_user.name}</p>
@@ -142,7 +137,7 @@ const MessageViewer = () => {
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-2 text-sm">
-        {messages.map((msg, idx) => {
+        {messages.map((msg) => {
           const currentDate = formatDate(msg.created_at);
           const showDate = currentDate !== lastDate;
           lastDate = currentDate;

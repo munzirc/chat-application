@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { createClient } from "../utils/supabase/supabaseClient";
 import { useApp } from "../context/AppContext";
 import NewChat from "./NewChat";
@@ -21,7 +21,6 @@ const ChatList = () => {
   const supabase = createClient();
   const { selectedChat, setSelectedChat, chats, setChats } = useApp();
 
-  const [userId, setUserId] = useState<string>("");
 
   useEffect(() => {
     const loadChats = async () => {
@@ -30,8 +29,6 @@ const ChatList = () => {
         error: userError,
       } = await supabase.auth.getUser();
       if (userError || !user) return;
-
-      setUserId(user.id);
 
       // Fetch chats where the user is either user1 or user2
       const { data: chatsData, error } = await supabase
@@ -45,6 +42,8 @@ const ChatList = () => {
         console.error("Error fetching chats:", error?.message);
         return;
       }
+
+      console.log(chatsData);
 
       const parsedChats: Chat[] = chatsData.map((chat: any) => {
         const isUser1 = chat.user1_id === user.id;
@@ -60,7 +59,8 @@ const ChatList = () => {
     };
 
     loadChats();
-  }, []);
+  });
+
 
   return (
     <div className="h-full w-[400px] relative flex flex-col border-r  border-gray-300">
@@ -82,7 +82,7 @@ const ChatList = () => {
               <img
                 src={avatar_url || "/default_avatar.png"}
                 alt="avatar"
-                className="w-8 h-8 rounded-full bg-gray-300 object-cover"
+                className="h-8 w-8 rounded-full bg-gray-300 object-cover"
               />
               <div className="flex flex-col">
                 <p className="text-sm font-medium">{name || "Unknown"}</p>

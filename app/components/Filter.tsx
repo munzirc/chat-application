@@ -2,7 +2,6 @@ import React from "react";
 import { HiFolderArrowDown } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { MdCancel, MdFilterList } from "react-icons/md";
-import { TbHelp } from "react-icons/tb";
 
 const Filter = () => {
   return (

@@ -1,14 +1,6 @@
 "use client";
 import React from "react";
-import { BsChatDots } from "react-icons/bs";
-import {
-  FaUserCircle,
-  FaComments,
-  FaUsers,
-  FaArchive,
-  FaCog,
-  FaQuestionCircle,
-} from "react-icons/fa";
+
 import { HiHome } from "react-icons/hi";
 import { useApp } from "../context/AppContext";
 import { AiFillMessage } from "react-icons/ai";
@@ -21,6 +13,7 @@ import { PiListBulletsBold } from "react-icons/pi";
 import { MdOutlineChecklist } from "react-icons/md";
 import { TbLayoutSidebarLeftExpandFilled, TbSettingsFilled, TbStarsFilled } from "react-icons/tb";
 
+
 const LeftNavbar: React.FC = () => {
   const { selectedNavButton, setSelectedNavButton } = useApp();
 
@@ -30,7 +23,7 @@ const LeftNavbar: React.FC = () => {
       <div className="space-y-4 flex flex-col items-center">
         {/* Top Icon */}
         <div className="relative">
-          <img src="/periskope_logo.png" className="w-10 h-10"/>
+          <img src="/periskope_logo.png" className="h-8 w-8" alt="user"/>
         </div>
         {/* Home */}
         <button

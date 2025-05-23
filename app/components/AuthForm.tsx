@@ -27,7 +27,7 @@ export default function AuthForm({ isSignUp }: Props) {
 
     try {
       if (isSignUp) {
-        const { data, error: signUpError } = await supabase.auth.signUp({
+        const {error: signUpError } = await supabase.auth.signUp({
           email,
           password,
           options: {
@@ -56,8 +56,9 @@ export default function AuthForm({ isSignUp }: Props) {
 
         router.push("/chat");
       }
-    } catch (err: any) {
-      setError(err.message || "An unexpected error occurred.");
+    } catch (e) {
+      console.log(e);
+      setError(isSignUp ? "Unable to signup" : "Unablw to sign in");
     } finally {
       setLoading(false);
     }

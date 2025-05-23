@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AuthForm from "../app/components/AuthForm";
 
 export default function LoginPage() {
