@@ -12,33 +12,3 @@ export function createClient() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const supabaseAdmin = createBrowserClient(supabaseUrl, serviceRoleKey);
-
-export const deleteUser = async (userId: string) => {
-  const { error } = await supabaseAdmin.auth.admin.deleteUser(userId);
-
-  if (error) {
-    console.error("Failed to delete user:", error.message);
-  }
-};
