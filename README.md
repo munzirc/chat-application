@@ -6,7 +6,6 @@ A real-time chat application built as part of the assignment for the Full Stack 
 
 - ✅ One-on-one real-time messaging
 - ✅ Authentication with Supabase
-- ✅ Responsive UI with Tailwind CSS
 - ✅ WhatsApp-like chat interface
 - ✅ Chat list and message view separation
 - ✅ Supabase real-time subscriptions for new messages
