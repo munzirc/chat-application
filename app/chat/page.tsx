@@ -13,7 +13,7 @@ const ChatDashboard = async () => {
       <TopBar />
       <RightNavBar />
 
-      <div className="absolute top-13 left-[57px] right-[45px] bottom-0 flex bg-white">
+      <div className="absolute top-13 left-[53px] right-[45px] bottom-0 flex bg-white">
         <ChatList />
         <MessageView />
       </div>

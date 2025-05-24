@@ -9,7 +9,7 @@ import { TbHelp, TbRefreshDot } from "react-icons/tb";
 
 const TopBar = () => {
   return (
-    <div className="absolute h-13 top-0 left-[57px] right-0 bg-white border-b border-gray-300 flex items-center justify-between px-4">
+    <div className="absolute h-13 top-0 left-[53px] right-0 bg-white border-b border-gray-300 flex items-center justify-between px-4">
       {/* Left */}
       <div className="flex items-center gap-1  text-gray-500">
         <AiFillMessage className="h-3.5" />

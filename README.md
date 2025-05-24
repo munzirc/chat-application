@@ -1,6 +1,6 @@
 # Chat Application 💬
 
-A real-time chat application built as part of the assignment for the Full Stack Developer (SDE-1) role at Periskope.
+A chat application built with Next.js, Tailwind CSS, TypeScript, and Supabase. It supports real-time one-on-one messaging with a clean interface.
 
 ## 🚀 Features
 
